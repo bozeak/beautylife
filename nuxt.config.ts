@@ -9,4 +9,12 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/tailwindcss",
   ],
+  icon: {
+    customCollections: [
+      {
+        prefix: 'bl',
+        dir: './public/icons/svg',
+      },
+    ],
+  }
 });
