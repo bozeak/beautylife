@@ -1,19 +1,19 @@
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow',
-      scrolled ? 'h-16' : 'h-[99px]',
+      'fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white',
+      scrolled ? 'h-20' : 'h-[99px]',
     ]"
   >
     <div class="container mx-auto flex items-center justify-between h-full px-4">
       <NuxtLink to="/" class="flex items-center h-full">
-        <NuxtImg src="/logo.svg" alt="Beauty Life Salon" class="h-10 w-auto" />
+        <NuxtImg src="/logo.svg" alt="Beauty Life Salon" class="h-16 w-auto" />
       </NuxtLink>
       <!-- Hamburger button (mobile) -->
       <button
         class="md:hidden ml-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-brand-pink"
-        @click="menuOpen = !menuOpen"
         aria-label="Toggle menu"
+        @click="menuOpen = !menuOpen"
       >
         <svg
           v-if="!menuOpen"
@@ -47,7 +47,7 @@
             to="/"
             class="uppercase font-semibold transition-colors"
             :class="isActive('/')"
-            >Home</NuxtLink
+            >Главная</NuxtLink
           >
         </li>
         <li>
@@ -55,7 +55,7 @@
             to="/contacts"
             class="uppercase font-semibold transition-colors"
             :class="isActive('/contacts')"
-            >Contacts</NuxtLink
+            >Контакты</NuxtLink
           >
         </li>
       </ul>
@@ -72,7 +72,7 @@
             class="uppercase font-semibold transition-colors block"
             :class="isActive('/')"
             @click="menuOpen = false"
-            >Home</NuxtLink
+            >Главная</NuxtLink
           >
         </li>
         <li>
@@ -81,7 +81,7 @@
             class="uppercase font-semibold transition-colors block"
             :class="isActive('/contacts')"
             @click="menuOpen = false"
-            >Contacts</NuxtLink
+            >Контакты</NuxtLink
           >
         </li>
       </ul>
@@ -109,7 +109,7 @@ onUnmounted(() => {
 
 const route = useRoute();
 const isActive = (path) =>
-  route.path === path ? "text-brand-pink" : "text-gray-700 hover:text-pink-400";
+  route.path === path ? "text-brand-pink" : "text-gray-700 hover:text-brand-pink";
 </script>
 
 <style scoped>
