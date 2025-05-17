@@ -3,7 +3,9 @@ import PostFooterComponent from "./components/PostFooterComponent.vue";
 </script>
 <template>
   <NavComponent />
-  <NuxtPage />
+  <div class="pt-[99px]">
+    <NuxtPage />
+  </div>
   <FooterComponent />
   <PostFooterComponent />
 </template>
