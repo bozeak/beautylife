@@ -7,14 +7,15 @@
       :navigation="navigationOptions"
       :pagination="paginationOptions"
       :autoplay="autoplayOptions"
+      :loop="true"
       class="w-full h-[400px] md:h-[600px]"
       @slide-change="onSlideChange"
     >
       <SwiperSlide v-for="(img, i) in images" :key="i">
         <div class="relative w-full h-full">
-          <img :src="img.src" class="object-cover w-full h-full" :alt="img.heading" />
+          <NuxtImg :src="img.src" class="object-cover w-full h-full" :alt="img.heading" />
           <div class="absolute inset-0 flex items-center justify-left container mx-auto">
-            <transition name="slide-up" mode="out-in">
+            <transition name="slide-up" mode="out-in" duration="3000">
               <div
                 v-if="currentIndex === i"
                 :key="currentIndex === i ? img.text : ''"
@@ -63,9 +64,9 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 // Import images from assets
-import img1 from "~/assets/images/1920x720_2.jpg";
-import img2 from "~/assets/images/1920x720.jpg";
-import img3 from "~/assets/images/1920x720_3.jpg";
+import img1 from "/images/1920x720_2.jpg";
+import img2 from "/images/1920x720.jpg";
+import img3 from "/images/1920x720_3.jpg";
 
 // Add text for each slide
 const images = [
@@ -104,6 +105,8 @@ const paginationOptions = {
 const autoplayOptions = {
   delay: 6000, // 6 seconds
   disableOnInteraction: false,
+  transitionSpeed: 3000,
+  waitForTransition: true,
 };
 
 const showNav = true;
