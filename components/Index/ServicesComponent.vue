@@ -6,18 +6,14 @@
         <p class="text-lg text-center mb-8">
           We offer a wide range of services to cater to all your beauty needs.
         </p>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 divide-x divide-y divide-gray-200"
-        >
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 shadow-sm">
           <div
             v-for="service in services"
             :key="service.id"
-            class="bg-white p-6 transition-transform duration-200 ease-in-out hover:scale-105 cursor-pointer"
+            class="bg-white p-6 transition-transform duration-900 ease-in-out hover:scale-110 cursor-pointer"
           >
             <div class="flex flex-col items-center mb-4 justify-center">
-              <div
-                class="w-24 h-22 mb-3 bg-gray-50 rounded-full flex items-center justify-center"
-              >
+              <div class="w-24 h-22 mb-3 bg-gray-50 rounded-full">
                 <Icon :name="service.icon" class="w-20 h-20 mb-3 text-brand-pink" />
               </div>
               <div>
