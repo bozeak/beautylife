@@ -1,0 +1,64 @@
+{
+    "main": "Home",
+    "contacts": "Contacts",
+    "book": "Make an appointment",
+    "details": "Details",
+    "swiper": {
+        "slides": [
+            {
+                "heading": "Try the Best Beauty Services",
+                "text": "We offer a full range of hairdressing services for men and women, brow and lash care, makeup and stylist services. Trust your beauty to professionals who truly care about your style and appearance!"
+            },
+            {
+                "heading": "Beauty Life - Beautiful as a Gift",
+                "text": "Beauty Life Salon offers the most modern and high-quality services for you and your whole family. We specialize in all cosmetic procedures, and our team is fully professional and innovative, from cosmetics to hairstyles."
+            },
+            {
+                "heading": "Quality Services - Care for Everyone",
+                "text": "Our beauty salon treatments will help you relax after a long and stressful day. At Beauty Life Salon, you can pamper yourself and enjoy the benefits of professional beauty care at an affordable price. Enjoy life with our high-quality beauty services."
+            }
+        ]
+    },
+    "why": {
+        "heading": "Why do clients choose us?",
+        "p1": "Our salon opened on 03.05.2018. From the very beginning, we assembled a strong (and experienced) and friendly team so that our clients would feel comfortable with us.",
+        "p2": "We strive to please every client so that they leave us in a great mood and want to return again. Once you visit our salon, you won't want to look for another."
+    },
+    "services": [
+        {
+            "name": "Haircut & Styling",
+            "description": "Enhance your look with our professional haircut & styling services."
+        },
+        {
+            "name": "Makeup",
+            "description": "Our makeup experts will help you look your best in less than 30 minutes."
+        },
+        {
+            "name": "Manicure & Pedicure",
+            "description": "Treat yourself to our manicure & pedicure services for sensational results."
+        },
+        {
+            "name": "Skin Care",
+            "description": "We offer a full range of relaxing skin care services, including all types of facials."
+        },
+        {
+            "name": "Body Care",
+            "description": "Rejuvenate your body with our invigorating body treatments for ultimate relaxation."
+        },
+        {
+            "name": "Massage",
+            "description": "Our massage services will help you relieve stress after a long, busy day."
+        }
+    ],
+    "servicesSection": {
+        "heading": "Our Services",
+        "description": "Treat yourself to one of our services. Our beloved beauty specialists will amaze your brows, give you a glow, and much more. You will look and feel better than ever before."
+    },
+    "ourSalon": {
+        "heading": "Our Salon",
+        "p1": "We provide quality hairdressing services and more for everyone!",
+        "p2": "We believe that the client's wishes come first. Our entire team is ready to fulfill any request. As a result, most of our clients are regulars.",
+        "quote": "We are responsible for the quality of services provided to you!",
+        "p3": "We strive to please every client so that they leave us in a great mood and want to return again. Once you visit our salon, you won't want to look for another."
+    }
+}

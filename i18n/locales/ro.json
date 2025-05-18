@@ -1,0 +1,64 @@
+{
+    "main": "Principala",
+    "contacts": "Contacte",
+    "book": "Vreau o programare",
+    "details": "Detalii",
+    "swiper": {
+        "slides": [
+            {
+                "heading": "Încearcă cele mai bune servicii de frumusețe",
+                "text": "Oferim o gamă completă de servicii de coafură pentru bărbați și femei, îngrijire pentru sprâncene și gene, servicii de machiaj și stilist. Încredințează-ți frumusețea profesioniștilor care chiar se preocupă de stilul și aspectul tău!"
+            },
+            {
+                "heading": "Beauty Life – Frumos ca un cadou",
+                "text": "Beauty Life Salon oferă cele mai moderne și de calitate servicii pentru tine și întreaga ta familie. Suntem specializați în toate procedurile cosmetice, iar echipa noastră este complet profesionistă și inovatoare, de la cosmetică la coafură."
+            },
+            {
+                "heading": "Servicii de calitate – Îngrijire pentru toți",
+                "text": "Tratamentele salonului nostru de frumusețe te vor ajuta să te relaxezi după o zi lungă și stresantă. La Beauty Life Salon te poți răsfăța și bucura de beneficiile îngrijirii profesionale la un preț accesibil. Bucură-te de viață cu serviciile noastre cosmetice de înaltă calitate."
+            }
+        ]
+    },
+    "why": {
+        "heading": "De ce ne aleg clienții?",
+        "p1": "Salonul nostru a fost deschis pe 03.05.2018. De la început am format o echipă puternică (cu experiență) și unită, pentru ca clienții noștri să se simtă confortabil la noi.",
+        "p2": "Ne străduim să mulțumim fiecare client, astfel încât să plece cu o dispoziție bună și cu dorința de a reveni. După ce ne veți vizita o dată, nu veți mai dori să căutați alt salon."
+    },
+    "services": [
+        {
+            "name": "Tuns & Coafat",
+            "description": "Îmbunătățește-ți aspectul cu serviciile noastre profesionale de tuns & coafat."
+        },
+        {
+            "name": "Machiaj",
+            "description": "Experții noștri în machiaj te vor ajuta să arăți impecabil în mai puțin de 30 de minute."
+        },
+        {
+            "name": "Manichiură & Pedichiură",
+            "description": "Răsfață-te cu serviciile noastre de manichiură & pedichiură pentru rezultate senzaționale."
+        },
+        {
+            "name": "Îngrijire a pielii",
+            "description": "Oferim o gamă completă de servicii relaxante pentru îngrijirea pielii, inclusiv toate tipurile de tratamente faciale."
+        },
+        {
+            "name": "Îngrijire corporală",
+            "description": "Reîntinerește-ți corpul cu tratamentele noastre revigorante pentru relaxare totală."
+        },
+        {
+            "name": "Masaj",
+            "description": "Serviciile noastre de masaj te vor ajuta să scapi de stres după o zi lungă și agitată."
+        }
+    ],
+    "servicesSection": {
+        "heading": "Serviciile Noastre",
+        "description": "Răsfață-te cu unul dintre serviciile noastre. Specialiștii noștri în frumusețe te vor surprinde cu sprâncene perfecte, strălucire și multe altele. Vei arăta și te vei simți mai bine ca niciodată."
+    },
+    "ourSalon": {
+        "heading": "Salonul nostru",
+        "p1": "Oferim servicii de coafură de calitate și nu numai, pentru toți doritorii!",
+        "p2": "Credem că dorințele clientului sunt pe primul loc. Întreaga noastră echipă este pregătită să îndeplinească orice dorință. Drept urmare, majoritatea clienților noștri sunt fideli.",
+        "quote": "Suntem responsabili pentru calitatea serviciilor oferite!",
+        "p3": "Ne străduim să mulțumim fiecare client, astfel încât să plece cu o dispoziție bună și cu dorința de a reveni. După ce ne veți vizita o dată, nu veți mai dori să căutați alt salon."
+    }
+}

@@ -11,13 +11,13 @@
       class="w-full h-[400px] md:h-[600px]"
       @slide-change="onSlideChange"
     >
-      <SwiperSlide v-for="(img, i) in images" :key="i">
+      <SwiperSlide v-for="(src, i) in images" :key="i">
         <div class="relative w-full h-full">
           <NuxtImg
-            :src="img.src"
+            :src="src"
             format="webp"
             class="object-cover w-full h-full"
-            :alt="img.heading"
+            :alt="`swiper.slides.${i}.heading`"
             :width="1920"
             :height="720"
             :loading="i === 0 ? 'eager' : 'lazy'"
@@ -26,18 +26,20 @@
             <transition name="slide-up" mode="out-in" duration="3000">
               <div
                 v-if="currentIndex === i"
-                :key="currentIndex === i ? img.text : ''"
+                :key="currentIndex === i ? $t(`swiper.slides.${i}.text`) : ''"
                 class="lg:w-3/5 mx-3 w-full px-6 py-4 bg-white bg-opacity-45 rounded-2xl shadow-lg backdrop-blur-sm transition-all duration-500 ease-in-out h-auto"
               >
                 <h2 class="text-2xl md:text-4xl font-bold mb-4">
-                  {{ img.heading }}
+                  {{ $t(`swiper.slides.${i}.heading`) }}
                 </h2>
-                <p class="mb-4 hidden md:block text-gray-600">{{ img.text }}</p>
+                <p class="mb-4 hidden md:block text-gray-600">
+                  {{ $t(`swiper.slides.${i}.text`) }}
+                </p>
                 <div class="mb-4 mt-12">
                   <NuxtLink
-                    to="/contacts"
+                    :to="localePath('/contacts')"
                     class="px-6 py-3 mt-6 border border-brand-pink rounded-2xl hover:bg-brand-pink hover:text-white transition-colors font-semibold"
-                    >Записаться</NuxtLink
+                    >{{ $t("book") }}</NuxtLink
                   >
                 </div>
               </div>
@@ -66,6 +68,7 @@
 import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { useLocalePath } from "#i18n";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -76,27 +79,10 @@ import img1 from "/images/1920x720_2.jpg";
 import img2 from "/images/1920x720.jpg";
 import img3 from "/images/1920x720_3.jpg";
 
+const localePath = useLocalePath();
+
 // Add text for each slide
-const images = [
-  {
-    src: img1,
-    text:
-      "Мы предлагаем полный спектр парикмахерских услуг для мужчин и женщин, уход за бровями и ресницами, услуги визажистов и стилистов. Доверьте свою красоту профессионалам, которые действительно заботятся о вашем стиле и внешности!",
-    heading: "Попробуйте Лучшие Услуги красоты",
-  },
-  {
-    src: img2,
-    text:
-      "Beauty Life Salon предлагает самые современные и качественные услуги для вас и всех членов вашей семьи. Мы специализируемся на всех косметических процедурах, и наша команда полностью профессиональна и инновационна, от косметики до прически.",
-    heading: "Beauty Life - Красивый как подарок",
-  },
-  {
-    src: img3,
-    text:
-      "Наши процедуры салона красоты помогут вам расслабиться после долгого и напряженного дня. В Beauty Life Salon вы можете побаловать себя и насладиться преимуществами профессионального ухода за красотой по доступной цене. Наслаждайтесь жизнью с нашими высококачественными косметическими услугами.",
-    heading: "Качественные Услуги - Уход для каждого",
-  },
-];
+const images = [img1, img2, img3];
 
 const navigationOptions = {
   nextEl: ".swiper-button-next",
@@ -117,7 +103,7 @@ const autoplayOptions = {
   waitForTransition: true,
 };
 
-const showNav = true;
+// const showNav = true;
 
 // Track active slide index for transition key
 const currentIndex = ref(0);
@@ -142,7 +128,7 @@ const onSlideChange = (swiper) => {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 .swiper-button-prev {
   left: 16px;

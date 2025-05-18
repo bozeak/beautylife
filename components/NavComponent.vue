@@ -6,7 +6,7 @@
     ]"
   >
     <div class="container mx-auto flex items-center justify-between h-full px-4">
-      <NuxtLink to="/" class="flex items-center h-full">
+      <NuxtLink :to="localePath('/')" class="flex items-center h-full">
         <NuxtImg
           src="/logo.svg"
           alt="Beauty Life Salon"
@@ -50,21 +50,23 @@
       <ul class="hidden md:flex items-center space-x-8">
         <li>
           <NuxtLink
-            to="/"
+            :to="localePath('/')"
             class="uppercase font-semibold transition-colors"
             :class="isActive('/')"
-            >Главная</NuxtLink
+            >{{ $t("main") }}</NuxtLink
           >
         </li>
         <li>
           <NuxtLink
-            to="/contacts"
+            :to="localePath('/contacts')"
             class="uppercase font-semibold transition-colors"
             :class="isActive('/contacts')"
-            >Контакты</NuxtLink
+            >{{ $t("contacts") }}</NuxtLink
           >
         </li>
       </ul>
+
+      <LangSwitcherComponent />
     </div>
     <!-- Mobile menu -->
     <transition name="fade">
@@ -74,20 +76,20 @@
       >
         <li>
           <NuxtLink
-            to="/"
+            :to="localePath('/')"
             class="uppercase font-semibold transition-colors block"
             :class="isActive('/')"
             @click="menuOpen = false"
-            >Главная</NuxtLink
+            >{{ $t("main") }}</NuxtLink
           >
         </li>
         <li>
           <NuxtLink
-            to="/contacts"
+            :to="localePath('/contacts')"
             class="uppercase font-semibold transition-colors block"
             :class="isActive('/contacts')"
             @click="menuOpen = false"
-            >Контакты</NuxtLink
+            >{{ $t("contacts") }}</NuxtLink
           >
         </li>
       </ul>
@@ -98,6 +100,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
+import { useLocalePath } from "#i18n";
 
 const scrolled = ref(false);
 const menuOpen = ref(false);
@@ -114,8 +117,14 @@ onUnmounted(() => {
 });
 
 const route = useRoute();
-const isActive = (path) =>
-  route.path === path ? "text-brand-pink" : "text-gray-700 hover:text-brand-pink";
+const localePath = useLocalePath();
+
+const isActive = (path) => {
+  const localized = localePath(path);
+  return route.path === localized
+    ? "text-brand-pink"
+    : "text-gray-700 hover:text-brand-pink";
+};
 </script>
 
 <style scoped>

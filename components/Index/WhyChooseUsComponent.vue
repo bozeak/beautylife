@@ -45,22 +45,18 @@
       </div>
       <div class="w-full md:w-1/2">
         <h2 class="text-3xl md:text-5xl font-bold text-gray-800 my-4 md:mb-6">
-          Почему клиенты выбирают нас?
+          {{ $t("why.heading") }}
         </h2>
         <p class="text-xl mb-4 text-gray-800">
-          Наш салон был открыт 03.05.2018г. С самого начала мы собрали сильную ( с
-          многолетним опытом ) и дружную команду, чтобы нашим клиентом было комфортно в
-          нашем коллективе.
+          {{ $t("why.p1") }}
         </p>
         <p class="text-gray-500 mb-6">
-          Мы стараемся угодить каждому клиенту, чтобы он уходил от нас в приподнятом
-          настроении и с желанием вернуться снова. Посетив однажды наш салон - Вам уже не
-          захочется искать другой.
+          {{ $t("why.p2") }}
         </p>
         <NuxtLink
           class="px-6 py-3 mt-6 border border-brand-pink rounded-2xl hover:bg-brand-pink hover:text-white transition-colors font-semibold"
           href="https://fb.com/salonbl"
-          >Подробнее</NuxtLink
+          >{{ $t("details") }}</NuxtLink
         >
       </div>
     </div>
