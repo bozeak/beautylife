@@ -5,7 +5,7 @@
         <h2 class="text-3xl font-bold text-center">
           {{ $t("servicesSection.heading") }}
         </h2>
-        <div class="bg-brand-pink w-[100px] h-0.5 m-auto my-6"></div>
+        <div class="bg-brand-pink w-[100px] h-0.5 m-auto my-6" />
         <p class="text-lg text-center mb-8 px-4 w-full md:w-2/4">
           {{ $t("servicesSection.description") }}
         </p>
