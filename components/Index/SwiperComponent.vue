@@ -13,7 +13,15 @@
     >
       <SwiperSlide v-for="(img, i) in images" :key="i">
         <div class="relative w-full h-full">
-          <NuxtImg :src="img.src" class="object-cover w-full h-full" :alt="img.heading" />
+          <NuxtImg
+            :src="img.src"
+            format="webp"
+            class="object-cover w-full h-full"
+            :alt="img.heading"
+            :width="1920"
+            :height="720"
+            :loading="i === 0 ? 'eager' : 'lazy'"
+          />
           <div class="absolute inset-0 flex items-center justify-left container mx-auto">
             <transition name="slide-up" mode="out-in" duration="3000">
               <div
@@ -38,19 +46,19 @@
         </div>
       </SwiperSlide>
       <!-- Navigation buttons for desktop -->
-      <template #navigation>
+      <!-- <template #navigation>
         <button v-if="showNav" class="swiper-button-prev custom-nav hidden md:flex">
           <Icon name="mdi:chevron-up" size="32" class="text-gray-500" />
         </button>
         <button v-if="showNav" class="swiper-button-next custom-nav hidden md:flex">
           <Icon name="mdi:chevron-down" size="32" class="text-gray-500" />
         </button>
-      </template>
+      </template> -->
     </Swiper>
     <!-- Pagination for mobile -->
-    <div class="md:hidden flex justify-center mt-4">
+    <!-- <div class="md:hidden flex justify-center mt-4">
       <div class="swiper-pagination"></div>
-    </div>
+    </div> -->
   </section>
 </template>
 

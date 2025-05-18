@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+    }
+  },
   modules: [
     "@nuxt/eslint",
     "@nuxt/image",
@@ -9,6 +14,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/tailwindcss",
   ],
+  // plugins: ['~/plugins/google-maps.js'],
   icon: {
     customCollections: [
       {

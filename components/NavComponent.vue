@@ -2,12 +2,18 @@
   <nav
     :class="[
       'fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white',
-      scrolled ? 'h-20' : 'h-[99px]',
+      scrolled ? 'h-20 border-b' : 'h-[99px]',
     ]"
   >
     <div class="container mx-auto flex items-center justify-between h-full px-4">
       <NuxtLink to="/" class="flex items-center h-full">
-        <NuxtImg src="/logo.svg" alt="Beauty Life Salon" class="h-16 w-auto" />
+        <NuxtImg
+          src="/logo.svg"
+          alt="Beauty Life Salon"
+          class="h-16 w-auto"
+          width="216"
+          height="64"
+        />
       </NuxtLink>
       <!-- Hamburger button (mobile) -->
       <button

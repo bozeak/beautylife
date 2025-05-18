@@ -1,24 +1,50 @@
 <template>
-  <section ref="sectionRef" class="bg-gray-100">
-    <div class="container mx-auto flex flex-row items-center justify-center py-16">
-      <div class="w-1/2">
+  <section ref="sectionRef" class="w-full bg-gray-100">
+    <div
+      class="container mx-auto flex flex-col md:flex-row items-center justify-center py-16"
+    >
+      <div class="w-[90%] md:w-1/2">
         <div class="relative custom-max-w">
           <div class="box-images-item box-image-1" :style="{ transform: parallax1() }">
-            <NuxtImg :src="img1" alt="Why Choose Us" width="282" height="282" />
+            <NuxtImg
+              :src="img1"
+              format="webp"
+              alt="Why Choose Us"
+              width="282"
+              height="282"
+            />
           </div>
           <div class="box-images-item box-image-2" :style="{ transform: parallax2() }">
-            <NuxtImg :src="img2" alt="Why Choose Us" width="240" height="369" />
+            <NuxtImg
+              :src="img2"
+              format="webp"
+              alt="Why Choose Us"
+              width="240"
+              height="369"
+            />
           </div>
           <div class="box-images-item box-image-3" :style="{ transform: parallax3() }">
-            <NuxtImg :src="img3" alt="Why Choose Us" width="259" height="369" />
+            <NuxtImg
+              :src="img3"
+              format="webp"
+              alt="Why Choose Us"
+              width="259"
+              height="369"
+            />
           </div>
           <div class="box-images-item box-image-4" :style="{ transform: parallax4() }">
-            <NuxtImg :src="img4" alt="Why Choose Us" width="266" height="266" />
+            <NuxtImg
+              :src="img4"
+              format="webp"
+              alt="Why Choose Us"
+              width="266"
+              height="266"
+            />
           </div>
         </div>
       </div>
-      <div class="w-1/2">
-        <h2 class="text-5xl font-bold text-gray-800 mb-4">
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-800 my-4 md:mb-6">
           Почему клиенты выбирают нас?
         </h2>
         <p class="text-xl mb-4 text-gray-800">
