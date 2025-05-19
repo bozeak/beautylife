@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/tailwindcss",
     '@nuxtjs/i18n',
+    '@nuxtjs/sitemap'
   ],
   icon: {
     customCollections: [
@@ -22,10 +23,11 @@ export default defineNuxtConfig({
     ],
   },
   i18n: {
+    baseUrl: 'https://beautylife.md',
     locales: [
-      { code: 'en', name: 'English', file: 'en.json' },
-      { code: 'ru', name: 'Русский', file: 'ru.json' },
-      { code: 'ro', name: 'Romana', file: 'ro.json' },
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'ru', language: 'ru-RU', name: 'Русский', file: 'ru.json' },
+      { code: 'ro', language: 'ro-MD', name: 'Romana', file: 'ro.json' },
     ],
     defaultLocale: 'ro',
     lazy: true,

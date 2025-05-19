@@ -4,7 +4,7 @@
       class="container mx-auto flex flex-col md:flex-row items-center justify-center py-16"
     >
       <div class="w-[90%] md:w-1/2">
-        <div class="relative custom-max-w">
+        <div class="relative custom-max-w p-12">
           <div class="box-images-item box-image-1" :style="{ transform: parallax1() }">
             <NuxtImg
               :src="img1"
@@ -44,20 +44,22 @@
         </div>
       </div>
       <div class="w-full md:w-1/2">
-        <h2 class="text-3xl md:text-5xl font-bold text-gray-800 my-4 md:mb-6">
-          {{ $t("why.heading") }}
-        </h2>
-        <p class="text-xl mb-4 text-gray-800">
-          {{ $t("why.p1") }}
-        </p>
-        <p class="text-gray-500 mb-6">
-          {{ $t("why.p2") }}
-        </p>
-        <NuxtLink
-          class="px-6 py-3 mt-6 border border-brand-pink rounded-2xl hover:bg-brand-pink hover:text-white transition-colors font-semibold"
-          href="https://fb.com/salonbl"
-          >{{ $t("details") }}</NuxtLink
-        >
+        <div class="p-8">
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-800 my-4 md:mb-6">
+            {{ $t("why.heading") }}
+          </h2>
+          <p class="text-xl mb-4 text-gray-800">
+            {{ $t("why.p1") }}
+          </p>
+          <p class="text-gray-500 mb-6">
+            {{ $t("why.p2") }}
+          </p>
+          <NuxtLink
+            class="px-6 py-3 mt-6 border border-brand-pink rounded-2xl hover:bg-brand-pink hover:text-white transition-colors font-semibold"
+            href="https://fb.com/salonbl"
+            >{{ $t("details") }}</NuxtLink
+          >
+        </div>
       </div>
     </div>
   </section>
@@ -72,6 +74,7 @@ import img4 from "/images/work266x266.jpg";
 
 const sectionRef = ref(null);
 const progress = ref(0);
+const isMobile = ref(false);
 
 const handleScroll = () => {
   if (!sectionRef.value) return;
@@ -82,19 +85,30 @@ const handleScroll = () => {
   progress.value = Math.max(0, Math.min(1, p));
 };
 
+const checkMobile = () => {
+  isMobile.value = window.innerWidth < 768; // Tailwind's md breakpoint
+};
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", checkMobile);
   handleScroll();
+  checkMobile();
 });
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("resize", checkMobile);
 });
 
 // Parallax factors for each image (tweak as you like)
-const parallax1 = () => `translateX(${30 - progress.value * 60}px)`; // right to left
-const parallax2 = () => `translateY(${progress.value * 40 - 20}px)`; // vertical as before
-const parallax3 = () => `translateX(${-40 + progress.value * 80}px)`; // left to right
-const parallax4 = () => `translateY(${progress.value * 30 - 15}px)`; // vertical as before
+const parallax1 = () =>
+  isMobile.value ? "none" : `translateX(${30 - progress.value * 60}px)`;
+const parallax2 = () =>
+  isMobile.value ? "none" : `translateY(${progress.value * 40 - 20}px)`;
+const parallax3 = () =>
+  isMobile.value ? "none" : `translateX(${-40 + progress.value * 80}px)`;
+const parallax4 = () =>
+  isMobile.value ? "none" : `translateY(${progress.value * 30 - 15}px)`;
 </script>
 
 <style scoped>
