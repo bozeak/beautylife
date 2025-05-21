@@ -3,7 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   runtimeConfig: {
-    public: {}
+    public: {
+      BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
+    }
   },
   modules: [
     "@nuxt/eslint",
@@ -12,7 +14,8 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/tailwindcss",
     '@nuxtjs/i18n',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@dargmuesli/nuxt-cookie-control'
   ],
   icon: {
     customCollections: [
@@ -23,7 +26,7 @@ export default defineNuxtConfig({
     ],
   },
   i18n: {
-    baseUrl: 'https://beautylife.md',
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     locales: [
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
       { code: 'ru', language: 'ru-RU', name: 'Русский', file: 'ru.json' },
@@ -32,5 +35,10 @@ export default defineNuxtConfig({
     defaultLocale: 'ro',
     lazy: true,
     langDir: 'locales/',
+    detectBrowserLanguage: false,
+  },
+  cookieControl: {
+    // Options for the cookie control module
+    locales: ['en', 'ru', 'ro'],
   }
 });

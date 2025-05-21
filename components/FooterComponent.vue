@@ -1,7 +1,3 @@
-<!-- <script setup lang="ts">
-import { NuxtLink } from "#components";
-</script> -->
-
 <template>
   <footer
     class="container mx-auto flex flex-col md:flex-row justify-between items-center py-8 border-t border-gray-200"
@@ -12,7 +8,7 @@ import { NuxtLink } from "#components";
       </NuxtLink>
     </div>
     <div>
-      <ul class="md:flex items-center space-x-8">
+      <ul class="flex items-center space-x-8 mt-6 md:mt-0">
         <li>
           <nuxt-link
             :to="localePath('/')"

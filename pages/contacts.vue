@@ -1,18 +1,23 @@
-<template>
-  <section class="w-full py-16 vh-100">
-    <div class="container mx-auto"><h2>Contacts page</h2></div>
-  </section>
-</template>
-
 <script setup>
+import ImageHeaderComponent from "~/components/Contacts/ImageHeaderComponent.vue";
+import BreadCrumbsComponent from "~/components/Contacts/BreadCrumbsComponent.vue";
 import { useHead } from "#imports";
+
+const { t } = useI18n();
+
 useHead({
-  title: "Contacts",
+  title: t("contacts"),
   meta: [
     {
       name: "description",
-      content: "Contact Beauty Life Salon for appointments and inquiries.",
+      content: t("contactsMetaDescription"),
     },
   ],
 });
 </script>
+
+<template>
+  <ImageHeaderComponent />
+  <BreadCrumbsComponent />
+  <ContactsMainComponent />
+</template>

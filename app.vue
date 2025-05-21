@@ -1,8 +1,11 @@
 <script setup>
+import FooterComponent from "./components/FooterComponent.vue";
 import PostFooterComponent from "./components/PostFooterComponent.vue";
-import { useHead } from "#imports";
+import { useHead, useI18n } from "#imports";
 
-const i18nHead = useLocaleHead({ seo: { canonicalQueries: ["foo"] } });
+const i18nHead = useLocaleHead({ seo: { canonicalQueries: [] } });
+const { locale, t } = useI18n();
+
 useHead(() => ({
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs.lang,
@@ -17,9 +20,13 @@ useHead({
   meta: [
     {
       name: "description",
-      content:
-        "Beauty Life Salon offers professional beauty, hair, and wellness services in Chișinău. Discover our team and book your appointment today!",
+      content: t("contactsMetaDescription"),
     },
+    // { name: "keywords", content: t("contactsMetaKeywords") },
+    { name: "theme-color", content: "#ee9f9f" },
+    { name: "apple-mobile-web-app-status-bar-style", content: "#ee9f9f" },
+    { name: "apple-mobile-web-app-capable", content: "yes" },
+    { name: "mobile-web-app-capable", content: "yes" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { name: "author", content: "Beauty Life Salon" },
     { name: "robots", content: "index, follow" },
@@ -30,7 +37,7 @@ useHead({
       content: "Professional beauty, hair, and wellness services in Chișinău.",
     },
     { property: "og:type", content: "website" },
-    { property: "og:url", content: "https://beautylife.md" },
+    { property: "og:url", content: process.env.SITE_URL },
     { property: "og:image", content: "/og-image.jpg" },
   ],
   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
@@ -41,14 +48,14 @@ useHead({
         "@context": "https://schema.org",
         "@type": "BeautySalon",
         name: "Beauty Life Salon",
-        image: "https://beautylife.md/og-image.jpg",
+        image: `${process.env.SITE_URL}/og-image.jpg`,
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Your Street 1",
+          streetAddress: "bd. Cuza Vodă 41",
           addressLocality: "Chișinău",
           addressCountry: "MD",
         },
-        telephone: "+373 123 456 78",
+        telephone: "+373 785 60 506",
       }),
     },
   ],
@@ -61,4 +68,5 @@ useHead({
   </div>
   <FooterComponent />
   <PostFooterComponent />
+  <CookieControl :locale="locale" />
 </template>
