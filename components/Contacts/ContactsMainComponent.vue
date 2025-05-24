@@ -55,6 +55,7 @@ import ContactsAddressBlock from "../Utils/ContactsAddressBlock.vue";
             </div>
             <button
               type="submit"
+              disabled
               class="bg-brand-pink text-white p-2 w-2/3 lg:w-1/3 rounded-full"
             >
               {{ $t("contactsPage.form.submit") }}
