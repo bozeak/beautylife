@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="container mx-auto flex flex-col md:flex-row justify-between items-center py-8 border-t border-gray-200"
+    class="container mx-auto flex flex-col md:flex-row justify-between items-center py-8"
   >
     <div>
       <NuxtLink :to="localePath('/')">

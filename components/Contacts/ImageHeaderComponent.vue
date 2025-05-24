@@ -1,7 +1,7 @@
 <template>
   <section class="relative w-full h-64 md:h-72 flex items-center overflow-hidden">
     <NuxtImg
-      src="/images/contact-banner2.jpg"
+      src="/images/contact-banner.jpeg"
       alt=""
       class="absolute inset-0 w-full h-full object-cover z-0"
       format="webp"
@@ -9,7 +9,7 @@
       aria-hidden="true"
       priority
     />
-    <div class="container relative z-10 mx-4 md:mx-auto flex items-center h-full">
+    <div class="container relative z-10 mx-4 flex items-center h-full">
       <h2 class="text-3xl md:text-4xl font-bold">
         {{ $t("contacts") }}
       </h2>

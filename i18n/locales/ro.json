@@ -61,5 +61,32 @@
         "p2": "Credem că dorințele clientului sunt pe primul loc. Întreaga noastră echipă este pregătită să îndeplinească orice dorință. Drept urmare, majoritatea clienților noștri sunt fideli.",
         "quote": "Suntem responsabili pentru calitatea serviciilor oferite!",
         "p3": "Ne străduim să mulțumim fiecare client, astfel încât să plece cu o dispoziție bună și cu dorința de a reveni. După ce ne veți vizita o dată, nu veți mai dori să căutați alt salon."
+    },
+    "contactsPage": {
+        "heading": "Contactează-ne",
+        "p1": "Ne poți contacta în modul cel mai convenabil pentru tine.",
+        "p2": "Poți folosi formularul de contact de mai jos sau să ne vizitezi direct la salon.",
+        "phone": "Telefon",
+        "email": "Email",
+        "address": "Adresă",
+        "form": {
+            "firstname": "Prenume",
+            "lastname": "Nume",
+            "phone": "Telefon",
+            "email": "Email",
+            "message": "Mesaj",
+            "submit": "Trimite"
+        },
+        "sidebar": {
+            "address": "Adresă",
+            "addressText": "Chișinău, bd. Cuza Vodă 41",
+            "phone": "Telefon",
+            "email": "Email",
+            "workingHours": {
+                "heading": "Program",
+                "l1": "Luni-Sâmbătă: 8:00 - 20:00",
+                "l2": "Duminică: 9:00 - 17:00"
+            }
+        }
     }
 }

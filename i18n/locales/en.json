@@ -61,5 +61,32 @@
         "p2": "We believe that the client's wishes come first. Our entire team is ready to fulfill any request. As a result, most of our clients are regulars.",
         "quote": "We are responsible for the quality of services provided to you!",
         "p3": "We strive to please every client so that they leave us in a great mood and want to return again. Once you visit our salon, you won't want to look for another."
+    },
+    "contactsPage": {
+        "heading": "Contact Us",
+        "p1": "You can contact us in the way most convenient for you.",
+        "p2": "You can use the contact form below or visit our salon in person.",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address",
+        "form": {
+            "firstname": "First Name",
+            "lastname": "Last Name",
+            "phone": "Phone",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send"
+        },
+        "sidebar": {
+            "address": "Address",
+            "addressText": "Chișinău, bd. Cuza Vodă 41",
+            "phone": "Phone",
+            "email": "Email",
+            "workingHours": {
+                "heading": "Working Hours",
+                "l1": "Mon-Sat: 8:00 - 20:00",
+                "l2": "Sun: 9:00 - 17:00"
+            }
+        }
     }
 }
