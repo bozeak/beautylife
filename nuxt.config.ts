@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   ],
   router: {
     options: {
-      strict: true
+      strict: false, // Disable strict mode for the router
     }
   },
   icon: {
