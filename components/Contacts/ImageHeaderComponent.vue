@@ -10,7 +10,9 @@
       priority
     />
     <div class="container md:mx-auto mx-4 relative z-10 flex items-center h-full">
-      <h2 class="text-3xl md:text-4xl md:mx-4 font-bold">
+      <h2
+        class="text-3xl md:text-4xl md:mx-4 font-bold px-6 py-4 bg-white bg-opacity-45 rounded-2xl shadow-lg backdrop-blur-sm transition-all duration-500 ease-in-out"
+      >
         {{ $t("contacts") }}
       </h2>
     </div>

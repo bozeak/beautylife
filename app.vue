@@ -56,6 +56,27 @@ useHead({
           addressCountry: "MD",
         },
         telephone: "+373 785 60 506",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+            ],
+            opens: "08:00",
+            closes: "20:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "Sunday",
+            opens: "09:00",
+            closes: "17:00",
+          },
+        ],
       }),
     },
   ],

@@ -10,7 +10,7 @@
         <NuxtImg
           src="/logo.svg"
           alt="Beauty Life Salon"
-          class="h-16 w-auto"
+          class="h-12 md:h-16 w-auto"
           width="216"
           height="64"
         />
