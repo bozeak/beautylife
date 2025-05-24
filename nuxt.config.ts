@@ -17,6 +17,11 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     '@dargmuesli/nuxt-cookie-control'
   ],
+  router: {
+    options: {
+      strict: true
+    }
+  },
   icon: {
     customCollections: [
       {
