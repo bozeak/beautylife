@@ -47,6 +47,7 @@ useHead({
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BeautySalon",
+        inLanguage: locale.value,
         name: "Beauty Life Salon",
         image: `${process.env.SITE_URL}/og-image.jpg`,
         address: {
