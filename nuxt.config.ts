@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
-      BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
+      BASE_URL: process.env.BASE_URL || 'https://beautylife.md',
     }
   },
   modules: [
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   ],
   router: {
     options: {
-      strict: false, // Disable strict mode for the router
+      strict: true, // Disable strict mode for the router
     }
   },
   icon: {
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     ],
   },
   i18n: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    baseUrl: process.env.BASE_URL || 'https://beautylife.md',
     locales: [
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
       { code: 'ru', language: 'ru-RU', name: 'Русский', file: 'ru.json' },
