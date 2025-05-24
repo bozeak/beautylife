@@ -1,7 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-a:not([disabled]):hover {
-  @apply text-brand-pink;
-}

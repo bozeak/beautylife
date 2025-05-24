@@ -69,7 +69,7 @@ import ContactsAddressBlock from "../Utils/ContactsAddressBlock.vue";
               icon="mdi:map-marker"
             >
               <NuxtLink
-                class="text-gray-500 text-lg"
+                class="text-gray-500 hover:text-brand-pink text-lg"
                 href="https://goo.gl/maps/AshaqQmxUywBMRyNA"
                 target="_blank"
                 >{{ $t("contactsPage.sidebar.addressText") }}
@@ -79,10 +79,14 @@ import ContactsAddressBlock from "../Utils/ContactsAddressBlock.vue";
               :title="$t('contactsPage.sidebar.phone')"
               icon="mdi:phone"
             >
-              <NuxtLink class="text-gray-500 text-lg" href="tel:+37322560506"
+              <NuxtLink
+                class="text-gray-500 hover:text-brand-pink text-lg"
+                href="tel:+37322560506"
                 >022 560 506 </NuxtLink
               ><span class="text-gray-500 text-lg pr-1">, </span>
-              <NuxtLink class="text-gray-500 text-lg" href="tel:+37378560506"
+              <NuxtLink
+                class="text-gray-500 hover:text-brand-pink text-lg"
+                href="tel:+37378560506"
                 >+373 785 60 506
               </NuxtLink>
             </ContactsAddressBlock>
@@ -90,7 +94,9 @@ import ContactsAddressBlock from "../Utils/ContactsAddressBlock.vue";
               :title="$t('contactsPage.sidebar.email')"
               icon="mdi:email-outline"
             >
-              <NuxtLink class="text-gray-500 text-lg" href="mailto:salon@beautylife.md"
+              <NuxtLink
+                class="text-gray-500 hover:text-brand-pink text-lg"
+                href="mailto:salon@beautylife.md"
                 >salon@beautylife.md</NuxtLink
               >
             </ContactsAddressBlock>
